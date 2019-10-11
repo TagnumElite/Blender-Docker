@@ -11,4 +11,5 @@ script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push tagnumelite/blender:nightly
   - echo "$GITHUB_PASSWORD" | docker login docker.pkg.github.com --u TagnumElite --password-stdin
+  - docker tag tagnumelite/blender:nightly
   - docker push docker.pkg.github.com/TagnumElite/blender-docker/blender:nightly
