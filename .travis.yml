@@ -1,0 +1,14 @@
+language: python
+if: tag IS present
+
+services: docker
+
+script: docker build -t tagnumelite/blender:develop
+
+deploy:
+  provider: script
+  script: bash deploy.sh
+  on:
+    tags: true
+    repo: TagnumElite/Blender-Docker
+    branch: develop
