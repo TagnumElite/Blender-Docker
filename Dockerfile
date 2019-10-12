@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 
-ENV BLENDER_VERSION 2.70
+ENV BLENDER_VERSION 2.71
 ENV BLENDER_HOME /usr/local/blender
 
 RUN mkdir $BLENDER_HOME && \

@@ -1,11 +1,8 @@
 # Blender-Docker
- 
-Docker images of blender using `ubuntu:latest`
-
-
-## Blender
 
 [![Blender Logo](./assets/blender_logo_socket.svg)](https://blender.org)
+ 
+Docker images of blender using `ubuntu:latest`
 
 ### Nightly Builds
 
