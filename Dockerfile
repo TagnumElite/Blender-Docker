@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 
-ENV BLENDER_MAJOR 2.79a
+ENV BLENDER_MAJOR 2.79b
 ENV BLENDER_VERSION 2.79
 ENV BLENDER_HOME /usr/local/blender
 
