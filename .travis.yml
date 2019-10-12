@@ -1,9 +1,8 @@
 language: python
-if: tag IS present
 
 services: docker
 
-script: docker build -t tagnumelite/blender:develop
+script: docker build -t tagnumelite/blender:develop .
 
 deploy:
   provider: script
