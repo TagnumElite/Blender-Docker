@@ -12,7 +12,7 @@ RUN apt-get update && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 
-ENV BLENDER_VERSION 2.81
+ENV BLENDER_VERSION 2.82
 ENV BLENDER_HOME /usr/local/blender
 
 RUN export BLENDER_SHA=$(curl -sSL "https://builder.blender.org/admin/api/v2/builders/16/builds?order=-number&results__eq=0&limit=1&property=got_revision" \
