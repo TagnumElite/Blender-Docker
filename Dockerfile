@@ -14,9 +14,9 @@ RUN apt-get update && \
 
 ENV BLENDER_VERSION 2.82
 ENV BLENDER_HOME /usr/local/blender
+COPY fetch_latest.sh /usr/local/temp/
 
-RUN export BLENDER_SHA=$(curl -sSL "https://builder.blender.org/admin/api/v2/builders/16/builds?order=-number&results__eq=0&limit=1&property=got_revision" \
-    | jq ".builds[0].properties.got_revision[0].blender" | cut -c2-13 ) && \
+RUN export BLENDER_SHA=$(/usr/local/temp/fetch_latest.sh) && \
     mkdir $BLENDER_HOME && \
     curl -SL "https://builder.blender.org/download/blender-$BLENDER_VERSION-$BLENDER_SHA-linux-glibc217-x86_64.tar.bz2" -o blender.tar.bz2 && \
     tar -jxvf blender.tar.bz2 -C $BLENDER_HOME --strip-components=1 && \
