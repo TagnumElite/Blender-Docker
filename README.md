@@ -1,4 +1,4 @@
-# Blender-Docker
+# Blender-Docker [![Docker Stars](https://img.shields.io/docker/stars/tagnumelite/blender) ![Docker Pulls](https://img.shields.io/docker/pulls/tagnumelite/blender)](https://hub.docker.com/r/tagnumelite/blender)
 
 [![Blender Logo](./assets/blender_logo_socket.svg)](https://blender.org)
  
